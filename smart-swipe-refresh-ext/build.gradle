@@ -22,7 +22,7 @@ android {
 dependencies {
     compileOnly project(':smart-swipe')
     // change to compile when running:  ./gradlew smart-swipe-refresh-ext:bintrayUpload
-    implementation 'com.wuyr:arrowdrawable:1.0.1'
+    api 'com.wuyr:arrowdrawable:1.0.1'
 }
 
 ext {

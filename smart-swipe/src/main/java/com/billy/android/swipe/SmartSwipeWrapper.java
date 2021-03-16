@@ -585,8 +585,8 @@ public class SmartSwipeWrapper extends ViewGroup {
         if (mHelper != null && mHelper.getSwipeConsumer().getDirection() != DIRECTION_NONE) {
             Arrays.fill(consumed, 0);
             wrapperNestedScroll(dx - consumedX, dy - consumedY, consumed, type);
-            consumedX -= consumed[0];
-            consumedY -= consumed[1];
+            consumedX += consumed[0];
+            consumedY += consumed[1];
         }
         if (!helperConsumed) {
             Arrays.fill(consumed, 0);
@@ -633,14 +633,14 @@ public class SmartSwipeWrapper extends ViewGroup {
                     }
                 }
                 if (!mNestedFlyConsumed) {
-                    mHelper.nestedScrollingDrag(-dxUnconsumed, -dyUnconsumed, consumed, true);
+                    mHelper.nestedScrollingDrag(dxUnconsumed, dyUnconsumed, consumed, true);
                     if (flyToOpen && consumer.getProgress() >= maxProgress || flyToClose && consumer.getProgress() <= 0) {
                         mNestedFlyConsumed = true;
                         mHelper.nestedScrollingRelease();
                     }
                 }
             } else {
-                mHelper.nestedScrollingDrag(-dxUnconsumed, -dyUnconsumed, consumed, false);
+                mHelper.nestedScrollingDrag(dxUnconsumed, dyUnconsumed, consumed, false);
                 if (consumer.getProgress() >= maxProgress || consumer.getProgress() <= 0) {
                     mHelper = null;
                 }
@@ -649,7 +649,7 @@ public class SmartSwipeWrapper extends ViewGroup {
             for (SwipeHelper helper : mHelpers) {
                 if (helper != null) {
                     //try to determined which SwipeHelper will handle this fake drag via nested scroll
-                    if (helper.nestedScrollingTrySwipe(-dxUnconsumed, -dyUnconsumed, type == ViewCompat.TYPE_NON_TOUCH)) {
+                    if (helper.nestedScrollingTrySwipe(dxUnconsumed, dyUnconsumed, type == ViewCompat.TYPE_NON_TOUCH)) {
                         mHelper = helper;
                         break;
                     }

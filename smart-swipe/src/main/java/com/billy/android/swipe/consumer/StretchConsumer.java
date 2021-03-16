@@ -28,9 +28,9 @@ public class StretchConsumer extends SwipeConsumer {
                 contentView.setScaleX(1 + Math.abs((float) distanceXToDisplay) / mWidth);
                 contentView.setTranslationX(distanceXToDisplay / 2F);
             }
-            if (distanceYToDisplay >= 0 && isTopEnable() || distanceYToDisplay <= 0 && isBottomEnable()) {
+            if (distanceYToDisplay <= 0 && isTopEnable() || distanceYToDisplay >= 0 && isBottomEnable()) {
                 contentView.setScaleY(1 + Math.abs((float) distanceYToDisplay) / mHeight);
-                contentView.setTranslationY(distanceYToDisplay / 2F);
+                contentView.setTranslationY(-distanceYToDisplay / 2F);
             }
         }
     }

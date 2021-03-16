@@ -204,10 +204,10 @@ public abstract class SwipeConsumer {
                     handle = true;
                 }
             } else {
-                if (dy > 0 && isTopEnable()) {
+                if (dy < 0 && isTopEnable()) {
                     dir = DIRECTION_TOP;
                     handle = true;
-                } else if (dy < 0 && isBottomEnable()) {
+                } else if (dy > 0 && isBottomEnable()) {
                     dir = DIRECTION_BOTTOM;
                     handle = true;
                 }
@@ -288,7 +288,7 @@ public abstract class SwipeConsumer {
                     break;
                 case DIRECTION_TOP:
                 case DIRECTION_BOTTOM:
-                    int dir = dy > 0 ? -1 : 1;
+                    int dir = dy < 0 ? -1 : 1;
                     if (topChild instanceof AbsListView) {
                         canScroll = ViewCompat.canListViewScrollVertical((AbsListView) topChild, dir);
                     } else {
@@ -468,10 +468,12 @@ public abstract class SwipeConsumer {
             mCachedSwipeDistanceY = 0;
         }
         if ((mDirection & DIRECTION_TOP) > 0 && isTopEnable()) {
-            return SmartSwipe.ensureBetween(distanceY, 0, mSwipeMaxDistance);
+            return SmartSwipe.ensureBetween(distanceY, -mSwipeMaxDistance, 0);
+//            return SmartSwipe.ensureBetween(distanceY, 0, mSwipeMaxDistance);
         }
         if ((mDirection & DIRECTION_BOTTOM) > 0 && isBottomEnable()) {
-            return SmartSwipe.ensureBetween(distanceY, -mSwipeMaxDistance, 0);
+            return SmartSwipe.ensureBetween(distanceY, 0, mSwipeMaxDistance);
+//            return SmartSwipe.ensureBetween(distanceY, -mSwipeMaxDistance, 0);
         }
         return 0;
     }

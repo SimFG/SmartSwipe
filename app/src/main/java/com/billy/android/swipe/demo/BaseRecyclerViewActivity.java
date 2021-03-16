@@ -44,7 +44,7 @@ public abstract class BaseRecyclerViewActivity extends BaseActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
+//        recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         adapter = new RecyclerAdapter(getInitData());
@@ -85,7 +85,7 @@ public abstract class BaseRecyclerViewActivity extends BaseActivity {
             names = getResources().getStringArray(R.array.demo_names);
             messages = getResources().getStringArray(getMessageArray());
         }
-        int size = 10;
+        int size = 20;
         List<Data> list = new ArrayList<>(size);
         Data  data;
         for (int i = 0; i < size; i++) {

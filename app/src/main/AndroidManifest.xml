@@ -28,6 +28,9 @@
         <activity android:name=".consumer.DoorConsumerActivity" />
         <activity android:name=".consumer.SwipeBackShuttersConsumerActivity" />
         <activity android:name=".consumer.ShuttersConsumerActivity" />
+        <activity android:name=".DrawerActivity" />
+        <activity android:name=".SlidingpanelActivity" />
+        <activity android:name=".nested.NestedActivity" />
 
     </application>
 </manifest>

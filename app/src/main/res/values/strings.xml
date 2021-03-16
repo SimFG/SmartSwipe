@@ -14,6 +14,9 @@
     <string name="demo_ui_ActivityDoorBackConsumer">ActivityDoorBackConsumer</string>
     <string name="demo_ui_ShuttersConsumer">ShuttersConsumer</string>
     <string name="demo_ui_ActivityShuttersBackConsumer">ActivityShuttersBackConsumer</string>
+    <string name="test_drawerLayout">DrawerLayout</string>
+    <string name="test_slidingLayout">SlidingLayout</string>
+    <string name="test_nested">NestedActivity</string>
     <string name="demo_description_SwipeBackBezierConsumer">Bezier swipe back, activity not move, show bezier at the direction edge which you are swiping.\n\n------swipe-to-finish-activity-->\n\nEnjoy yourself with left/top/right/bottom directions.</string>
     <string name="demo_description_SwipeBackStayConsumer">swipe to finish activity, activity not move while swiping.\n\n------swipe-to-finish-activity-->\n\nEnjoy yourself with left/top/right/bottom directions.</string>
     <string name="demo_description_SwipeBackTranslucentConsumer">swipe to finish activity, the previous activity shows behind.\n\n------swipe-to-finish-activity-->\n\nEnjoy yourself with left/top/right/bottom directions.</string>

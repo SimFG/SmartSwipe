@@ -32,6 +32,7 @@ import com.billy.android.swipe.demo.consumer.SwipeBackShuttersConsumerActivity;
 import com.billy.android.swipe.demo.consumer.SwipeBackStayConsumerActivity;
 import com.billy.android.swipe.demo.consumer.SwipeBackTranslucentConsumerActivity;
 import com.billy.android.swipe.demo.consumer.TranslucentConsumerActivity;
+import com.billy.android.swipe.demo.nested.NestedActivity;
 import com.billy.android.swipe.listener.SimpleSwipeListener;
 
 import java.text.DecimalFormat;
@@ -434,5 +435,17 @@ public class MainActivity extends BaseActivity {
 
     public void toActivityShuttersBackConsumerActivity(View view) {
         forwardToActivity(SwipeBackShuttersConsumerActivity.class);
+    }
+
+    public void toActivityDrawerActivity(View view) {
+        forwardToActivity(DrawerActivity.class);
+    }
+
+    public void toActivitySlidingActivity(View view) {
+        forwardToActivity(SlidingpanelActivity.class);
+    }
+
+    public void toActivityNestedActivity(View view) {
+        forwardToActivity(NestedActivity.class);
     }
 }

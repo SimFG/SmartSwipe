@@ -25,13 +25,14 @@ public class MyApp extends Application {
         //add global swipe back for all activities
         // for more details: https://qibilly.com/SmartSwipe-tutorial/pages/SmartSwipeBack.html
 
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-            //use bezier back before LOLLIPOP
-            SmartSwipeBack.activityBezierBack(this, activitySwipeBackFilter);
-        } else {
-            //add relative moving slide back
-            SmartSwipeBack.activitySlidingBack(this, activitySwipeBackFilter);
-        }
+        // TODO 为了分析先删除
+//        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+//            //use bezier back before LOLLIPOP
+//            SmartSwipeBack.activityBezierBack(this, activitySwipeBackFilter);
+//        } else {
+//            //add relative moving slide back
+//            SmartSwipeBack.activitySlidingBack(this, activitySwipeBackFilter);
+//        }
 
         // demo: set the default creator of refresh view with SmartSwipeRefresh for global usage
         SmartSwipeRefresh.setDefaultRefreshViewCreator(new SmartSwipeRefresh.SmartSwipeRefreshViewCreator() {

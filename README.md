@@ -2,7 +2,7 @@
 
 项目原地址：[luckybilly/SmartSwipe](https://github.com/luckybilly/SmartSwipe)
 
-**以下方案均为个人理解，存在错误望指正。**
+**因为项目原作者好像没有在维护项目了，所以自己写一些分析记录。以下方案均为个人理解，存在错误望指正。**
 
 - [ 分析](#head1)
 	- [StretchConsumer - 滑动机制详解](#head2)
